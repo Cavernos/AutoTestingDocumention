@@ -1,0 +1,8 @@
+;Titre de l'essai;;ID de l'essai;;Date de l'essai;
+;TestKaprekar;;0;;13/02/2025 21:58:54;
+;Description de l'essai;;Nom du testeur;;;
+;Test Kaprekar make all test related with kaprekar function;;Louis Dubois;;;
+N°;ACTION;VALEUR D'ENTREE;RESULTAT;ATTENDU;STATUS;MODIFICATION
+0;test_base_ten_2_digits;28;['09', '27', '45', '63', '81'];['09', '27', '45', '63', '81'];PASSED;[]
+1;test_base_ten_3_digits;404000;['420876', '851742', '750843', '840852', '860832', '862632', '642654'];495;FAILED;[]
+2;test_base_ten_4_digits;9916;6174;6174;PASSED;[]
