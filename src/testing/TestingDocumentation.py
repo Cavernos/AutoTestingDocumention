@@ -1,12 +1,9 @@
-import csv
-import inspect
-import re
 import unittest
 from datetime import datetime
 from typing import Type
 from unittest import TestCase, TestResult
 
-from lib.AutoTestingDocumentation.src.testing.TestingFunction import TestingFunction
+from auto_testing_documentation.testing import TestingFunction
 
 
 class TestingDocumentation:
@@ -106,11 +103,11 @@ class TestingDocumentation:
             returned_string += f"{key.title()}: {getattr(self, key)}\n"
         return returned_string
 
-if __name__ == "__main__":
-    from tests.kaprekar.test_kaprekar import TestKaprekar
-    documentation = TestingDocumentation(0, TestKaprekar, description=inspect.getdoc(TestKaprekar).splitlines()[0])
-    documentation.run()
-    with open("test.csv", 'w', newline='') as csvfile:
-        fieldnames, rows = documentation.to_csv()
-        csv.DictWriter(csvfile, delimiter=';', fieldnames=fieldnames, dialect='excel').writerows(rows)
-    print(documentation)
+# if __name__ == "__main__":
+#     from tests.kaprekar.test_kaprekar import TestKaprekar
+#     documentation = TestingDocumentation(0, TestKaprekar, description=inspect.getdoc(TestKaprekar).splitlines()[0])
+#     documentation.run()
+#     with open("test.csv", 'w', newline='') as csvfile:
+#         fieldnames, rows = documentation.to_csv()
+#         csv.DictWriter(csvfile, delimiter=';', fieldnames=fieldnames, dialect='excel').writerows(rows)
+#     print(documentation)

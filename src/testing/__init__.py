@@ -1,0 +1,2 @@
+from auto_testing_documentation.testing.TestingDocumentation import TestingDocumentation
+from auto_testing_documentation.testing.TestingFunction import TestingFunction
